@@ -1,5 +1,5 @@
 Template.homeIndex.helpers({
   featured : function(){
-    return Products.featured();
+    return RocketShop.Products.featured();
   }
 });

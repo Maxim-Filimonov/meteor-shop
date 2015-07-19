@@ -1,5 +1,5 @@
 Meteor.publish("featured-products", function(){
-  return Products.featured();
+  return RocketShop.Products.featured();
 });
 
 Meteor.publish("vendors", function(){
@@ -8,12 +8,12 @@ Meteor.publish("vendors", function(){
 
 Meteor.publish("products-by-vendor", function(slug){
   check(slug, String);
-  return Products.find({"vendor.slug" : slug})
+  return RocketShop.Products.find({"vendor.slug" : slug})
 });
 
 Meteor.publish("products-by-sku", function(sku){
   check(sku, String);
-  return Products.find({sku : sku});
+  return RocketShop.Products.find({sku : sku});
 });
 
 Meteor.publish("cart", function(key){

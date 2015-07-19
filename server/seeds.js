@@ -171,9 +171,9 @@ var productSeeds = [
   }
 ];
 
-if(Products.find().count() === 0){
+if(RocketShop.Products.find().count() === 0){
   _.each(productSeeds, function(product){
-    Products.insert(product);
+    RocketShop.Products.insert(product);
     console.log("Inserted ", product.sku);
   })
 }
